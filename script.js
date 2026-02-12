@@ -104,7 +104,7 @@ function addWord() {
 function editWord(index) {
     const newWord = prompt('Edit word:', wordBank[index]);
     if (newWord) {
-        wordBank.splice(index, 1);
+        wordBank[index] = newWord.trim().toUpperCase();
         saveWordBank();
         displayWordBank();
     }
